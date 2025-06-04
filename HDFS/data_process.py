@@ -11,8 +11,8 @@ import numpy as np
 from logparser import Spell, Drain
 
 # get [log key, delta time] as input for deeplog
-input_dir  = os.path.expanduser('~/.dataset/hdfs/')
-output_dir = '../output/hdfs/'  # The output directory of parsing results
+input_dir  = os.path.expanduser('/content/drive/HDFS_v1/')
+output_dir = '/content/drive/HDFS_v1/output/'  # The output directory of parsing results
 log_file   = "HDFS.log"  # The input log file name
 
 log_structured_file = output_dir + log_file + "_structured.csv"
@@ -68,10 +68,9 @@ def hdfs_sampling(log_file, window='session'):
 
     data_dict = defaultdict(list) #preserve insertion order of items
     for idx, row in tqdm(df.iterrows()):
-        blkId_list = re.findall(r'(blk_-?\d+)', row['Content'])
-        blkId_set = set(blkId_list)
-        for blk_Id in blkId_set:
-            data_dict[blk_Id].append(row["EventId"])
+        blk_id_set = set(re.findall(r'(blk_-?\d+)', row['Content']))
+        for blk_id in blk_id_set:
+            data_dict[blk_id].append(row["EventId"])
 
     data_df = pd.DataFrame(list(data_dict.items()), columns=['BlockId', 'EventSequence'])
     data_df.to_csv(log_sequence_file, index=None)
