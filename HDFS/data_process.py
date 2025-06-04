@@ -11,8 +11,8 @@ import numpy as np
 from logparser import Spell, Drain
 
 # get [log key, delta time] as input for deeplog
-input_dir  = os.path.expanduser('/content/drive/HDFS_v1/')
-output_dir = '/content/drive/HDFS_v1/output/'  # The output directory of parsing results
+input_dir  = os.path.expanduser('/content/drive/MyDrive/HDFS_v1/')
+output_dir = '/content/drive/MyDrive/HDFS_v1/output/'  # The output directory of parsing results
 log_file   = "HDFS.log"  # The input log file name
 
 log_structured_file = output_dir + log_file + "_structured.csv"
