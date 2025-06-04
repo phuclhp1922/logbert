@@ -12,7 +12,7 @@ from logdeep.dataset.vocab import Vocab
 
 import torch
 
-output_dir = "../output/hdfs/"
+output_dir = "/content/drive/MyDrive/HDFS_v1/output"
 
 # Config Parameters
 options = dict()

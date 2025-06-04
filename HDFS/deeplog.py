@@ -12,8 +12,8 @@ from logdeep.dataset.vocab import Vocab
 
 import torch
 
-data_dir = os.path.expanduser("~/.dataset/hdfs")
-output_dir = "../output/hdfs/"
+data_dir = os.path.expanduser("/content/drive/MyDrive/HDFS_v1/")
+output_dir = "/content/drive/MyDrive/HDFS_v1/output/"
 
 # Config Parameters
 options = dict()
