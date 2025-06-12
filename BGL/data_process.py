@@ -17,8 +17,8 @@ PAD = 0
 UNK = 1
 START = 2
 
-data_dir = os.path.expanduser("~/.dataset/bgl")
-output_dir = "../output/bgl/"
+data_dir = os.path.expanduser("/content/drive/MyDrive/BGL/")
+output_dir = "/content/drive/MyDrive/BGL/output"
 log_file = "BGL.log"
 
 
