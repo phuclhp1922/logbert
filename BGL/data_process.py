@@ -18,7 +18,7 @@ UNK = 1
 START = 2
 
 data_dir = os.path.expanduser("/content/drive/MyDrive/BGL/")
-output_dir = "/content/drive/MyDrive/BGL/output"
+output_dir = "/content/drive/MyDrive/BGL/output/"
 log_file = "BGL.log"
 
 
@@ -125,7 +125,7 @@ if __name__ == "__main__":
     step_size = 1
     train_ratio = 0.4
 
-    df = pd.read_csv(f'{output_dir}/{log_file}_structured.csv')
+    df = pd.read_csv(f'{output_dir}{log_file}_structured.csv')
 
     # data preprocess
     df['datetime'] = pd.to_datetime(df['Time'], format='%Y-%m-%d-%H.%M.%S.%f')
